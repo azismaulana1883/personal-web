@@ -1,0 +1,638 @@
+/* Reset CSS */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: xx-large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+p{
+    font-size: medium;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    color: #333; /* Warna teks dasar */
+    font-size: 16px;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
+
+.main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; /* Untuk memusatkan konten secara horizontal */
+    justify-content: center; /* Untuk memusatkan konten secara vertikal */
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0; /* Memberikan padding atas dan bawah 20px */
+    }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: wavy;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Utilitas yang mungkin berguna */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Ini akan memberikan sedikit efek geser ke bawah */
+    transition: opacity 1s, transform 1s; /* Efek transisi ketika opasitas dan transformasi berubah */
+    will-change: opacity, transform; /* Optimasi performa */
+}
+
+.fade-right {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s, transform 1s;
+    will-change: opacity, transform;
+}
+
+.fade-left {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 1s, transform 1s;
+    will-change: opacity, transform;
+}
+
+.fade-down {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s, transform 1s;
+    will-change: opacity, transform;
+}
+
+.fade-zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1s, transform 1s;
+    will-change: opacity, transform;
+}
+
+.fade-zoom-out {
+    opacity: 0;
+    transform: scale(1.1);
+    transition: opacity 1s, transform 1s;
+    will-change: opacity, transform;
+}
+
+
+
+/* Styling untuk semua ukuran layar */
+.header {
+    position: fixed; /* Ini akan memastikan header tetap di posisinya saat discroll */
+    top: 0; /* Memastikan header berada di atas */
+    left: 0; /* Memastikan header berada di sisi kiri */
+    width: 100%; /* Mengambil seluruh lebar layar */
+    z-index: 1000; /* Ini akan memastikan header selalu berada di atas konten lainnya */
+    background-color: #007BFF; /* Menambahkan latar belakang agar konten di bawahnya tidak terlihat saat overlap */
+}
+
+
+.nav {
+    background-color: #007BFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 2rem;
+}
+
+.nav__logo a,
+.nav__btn-auth a:hover {
+    margin: 1rem;
+    text-decoration: wavy;
+    color: white;
+}
+
+.nav__bars {
+    display: none;
+    width: 100px; /* Set lebar untuk container tombol */
+}
+
+.bars__line hr {
+    margin: 2px 0; /* Jarak antar garis */
+    border: 0;
+    width: 30px;
+    height: 2px; /* Ketebalan garis */
+    background-color: white; /* Warna garis */
+}
+
+.menu__bar {
+    display: flex;
+    transition: max-height 0.5s ease; /* transition untuk animasi */
+    max-height: 0;
+    overflow: hidden;
+    flex-direction: column; /* agar item menu ditampilkan secara vertikal */
+}
+
+.menu__bar a {
+    padding: 10px 0;
+}
+
+.menu__bar.active {
+    max-height: 150px; /* tinggi maksimal saat menu dibuka */
+}
+
+.portofolio-header{
+    padding-top: 30px;
+}
+
+.description{
+    font-size: medium;
+    font-family: sans-serif;
+    text-align: start;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-deskripsi{
+    font-size: medium;
+    font-family: sans-serif;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+.profile-banner {
+    width: 400px;
+    height: 400px;
+    object-fit: contain; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pengalaman {
+    /* background-color: red; */
+    margin-top: 10px;
+
+}
+
+.pengalaman-kerja {
+    font-size: large;
+    /* background-color: blue; */
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: x-large;
+}
+
+.pengalaman-magang{
+    font-size: medium;
+        font-family: sans-serif;
+        text-align: start;
+        padding-top: 10px;
+        margin-bottom: 10px;
+}
+
+.foto-web{
+    object-fit: cover;
+}
+
+.image-web {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Ini akan membuat 2 kolom dengan ukuran yang sama */
+    grid-gap: 10px; /* Ini adalah jarak antara gambar */
+    padding: 10px 0;
+    margin: 10px 0;
+    align-items: center;
+    justify-content: center; 
+}
+
+.web-image {
+    width: 100%; /* Gambar akan menyesuaikan dengan ukuran kolom */
+    display: block; 
+    margin: 0 auto; /* Ini akan memusatkan gambar jika lebar aslinya lebih kecil dari lebar kolom */
+}
+
+/* Blog Styles dengan Flexbox */
+
+.blog {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.blog-deskripsi {
+    font-size: medium;
+    font-family: sans-serif;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap; /* Untuk memastikan artikel menyesuaikan dengan lebar layar dan mengalir dengan baik */
+    justify-content: center; /* Posisi artikel ke tengah */
+    gap: 2rem;
+}
+
+.blog-post {
+    flex: 1 1 calc(30% - 1rem); /* Ini akan memastikan setiap artikel mengambil ~30% dari lebar total, dengan mengurangi jarak */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan untuk efek elevasi */
+    border-radius: 8px; /* Pembulatan sudut */
+    overflow: hidden; /* Agar gambar dan konten tidak melewati batas pembulatan */
+    transition: transform 0.3s ease; /* Efek hover */
+    margin: 1rem; /* Memberikan sedikit margin di sekitar setiap artikel */
+    text-align: left; /* Untuk mengatur teks ke kiri */
+}
+
+.blog-post:hover {
+    transform: scale(1.05); /* Efek zoom saat di-hover */
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post h3 {
+    padding: 1rem 0;
+    background-color: #007BFF;
+    color: #fff;
+    margin-top: 0;
+    text-align: center; /* Mengatur judul artikel ke tengah */
+}
+
+.blog-post p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.portfolio-img {
+    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    max-width: 100%; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-img:hover {
+    transform: scale(1.1);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Memberikan ruang di antara daftar skill */
+    margin-top: 20px; /* Jarak antara gambar dan daftar skill */
+}
+
+.skills h2 {
+    width: 100%; /* Mengambil seluruh lebar container */
+    text-align: center;
+    margin-bottom: 10px; /* Jarak antara judul dan daftar skill */
+}
+
+.skills p {
+    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    text-align: center;
+}
+
+
+
+
+/* Responsivitas untuk layar <= 768px */
+@media (max-width: 768px) {
+    .nav__btn-auth {
+        display: none; /* sembunyikan menu default di layar mobile */
+    }
+
+    .nav__bars {
+        display: block; /* tampilkan tombol di layar mobile */
+    }
+    .nav {
+        background-color: blueviolet;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 2rem;
+    }
+
+    .description{
+        font-size: medium;
+        font-family: sans-serif;
+        text-align: start;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .pengalaman {
+        /* background-color: red; */
+        margin-top: 10px;
+    
+    }
+    
+    .pengalaman-kerja {
+        font-size: x-large;
+        /* background-color: blue; */
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    
+    .foto-web{
+        object-fit: cover;
+    }
+    
+    .image-web {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Ini akan membuat 2 kolom dengan ukuran yang sama */
+        grid-gap: 10px; /* Ini adalah jarak antara gambar */
+        padding: 10px 0;
+        margin: 10px 0;
+        align-items: center;
+        justify-content: center; 
+    }
+    
+    .web-image {
+        width: 100%; /* Gambar akan menyesuaikan dengan ukuran kolom */
+        display: block; 
+        margin: 0 auto; /* Ini akan memusatkan gambar jika lebar aslinya lebih kecil dari lebar kolom */
+    }
+
+    /* Blog Styles dengan Flexbox HP */
+
+.blog {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.blog-deskripsi {
+    font-size: medium;
+    font-family: sans-serif;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blog-posts {
+    display: flex;
+    flex-wrap: wrap; /* Untuk memastikan artikel menyesuaikan dengan lebar layar dan mengalir dengan baik */
+    justify-content: center; /* Posisi artikel ke tengah */
+    gap: 2rem;
+}
+
+.blog-post {
+    flex: 1 1 calc(30% - 1rem); /* Ini akan memastikan setiap artikel mengambil ~30% dari lebar total, dengan mengurangi jarak */
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan untuk efek elevasi */
+    border-radius: 8px; /* Pembulatan sudut */
+    overflow: hidden; /* Agar gambar dan konten tidak melewati batas pembulatan */
+    transition: transform 0.3s ease; /* Efek hover */
+    margin: 1rem; /* Memberikan sedikit margin di sekitar setiap artikel */
+    text-align: left; /* Untuk mengatur teks ke kiri */
+}
+
+.blog-post:hover {
+    transform: scale(1.05); /* Efek zoom saat di-hover */
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.blog-post h3 {
+    padding: 1rem 0;
+    background-color: #007BFF;
+    color: #fff;
+    margin-top: 0;
+    text-align: center; /* Mengatur judul artikel ke tengah */
+}
+
+.blog-post p {
+    padding: 0 1rem 1rem 1rem;
+}
+
+.portfolio-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.portfolio-img {
+    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    max-width: 100%; 
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-img:hover {
+    transform: scale(1.1);
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Memberikan ruang di antara daftar skill */
+    margin-top: 20px; /* Jarak antara gambar dan daftar skill */
+}
+
+.skills h2 {
+    width: 100%; /* Mengambil seluruh lebar container */
+    text-align: center;
+    margin-bottom: 10px; /* Jarak antara judul dan daftar skill */
+}
+
+.skills p {
+    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    text-align: center;
+}
+
+    
+
+/* Footer Styles Hp */
+
+.footer {
+    background-color: #333; /* Warna latar belakang footer */
+    color: #ffffff; /* Warna teks footer */
+    padding: 1rem 0; /* Padding atas dan bawah */
+    display: flexbox;
+    justify-content: space-between; /* Posisi konten footer untuk terpisah */
+    align-items: center;
+    width: 100%;
+    position: relative; /* Penempatan absolut agar footer tetap di bagian bawah */
+    bottom: 0; /* Memastikan footer berada di paling bawah */
+}
+
+.footer__logo a,
+.footer__navigation a {
+    color: #ffffff; /* Warna tautan di footer */
+    margin-bottom: 0.5rem; /* Margin antara tautan-tautan */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.footer__logo a:hover,
+.footer__navigation a:hover {
+    color: #007BFF; /* Warna tautan saat dihover */
+}
+
+.footer__logo p {
+    margin-top: 0.5rem; /* Margin di atas teks hak cipta */
+}
+
+.footer__navigation {
+    display: flexbox; /* Membuat kolom navigasi berdampingan */
+    gap: 1rem; /* Jarak antara kolom navigasi */
+    margin-right: 10%;
+}
+
+.footer__navigation ul {
+    list-style-type: none; /* Menghapus bullet points dari daftar */
+    padding: 0; /* Menghapus padding dari daftar */
+}
+
+.footer__navigation li {
+    margin-bottom: 0.5rem; /* Margin antara item-item daftar */
+}
+
+
+}
+
+/* Efek hover untuk tautan di navbar */
+.nav__btn-auth a:hover,
+.menu__bar a:hover {
+    color: #FFF8DC;
+    transition: color 0.3s ease;
+}
+
+.kontak {
+    background-color: transparent;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.kontak h1 {
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.kontak-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.kontak-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.kontak-item img {
+    width: 24px;
+    height: 24px;
+}
+
+.kontak-item:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+
+
+/* Footer Styles */
+
+.footer {
+    background-color: #333; /* Warna latar belakang footer */
+    color: #ffffff; /* Warna teks footer */
+    padding: 2rem 0; /* Padding atas dan bawah */
+    display: flex;
+    justify-content: space-between; /* Posisi konten footer untuk terpisah */
+    align-items: center;
+    width: 100%;
+    position: relative; /* Penempatan absolut agar footer tetap di bagian bawah */
+    bottom: 0; /* Memastikan footer berada di paling bawah */
+}
+
+.footer__logo a,
+.footer__navigation a {
+    color: #ffffff; /* Warna tautan di footer */
+    margin-bottom: 0.5rem; /* Margin antara tautan-tautan */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Efek transisi saat hover */
+}
+
+.footer__logo a:hover,
+.footer__navigation a:hover {
+    color: #007BFF; /* Warna tautan saat dihover */
+}
+
+.footer__logo p {
+    margin-top: 0.5rem; /* Margin di atas teks hak cipta */
+}
+
+.footer__navigation {
+    display: flex; /* Membuat kolom navigasi berdampingan */
+    gap: 1rem; /* Jarak antara kolom navigasi */
+    margin-right: 10%;
+}
+
+.footer__navigation ul {
+    list-style-type: none; /* Menghapus bullet points dari daftar */
+    padding: 0; /* Menghapus padding dari daftar */
+}
+
+.footer__navigation li {
+    margin-bottom: 0.5rem; /* Margin antara item-item daftar */
+}
+
