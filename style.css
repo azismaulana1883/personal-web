@@ -505,7 +505,7 @@ button {
     align-items: center;
     width: 100%;
     position: relative; /* Penempatan absolut agar footer tetap di bagian bawah */
-    bottom: 0; /* Memastikan footer berada di paling bawah */
+    bottom: 100%; /* Memastikan footer berada di paling bawah */
 }
 
 .footer__logo a,
