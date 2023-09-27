@@ -492,6 +492,24 @@ button {
     text-align: center;
 }
 
+/* Artikel section HP */
+
+.artikel {
+    padding: 20px;
+}
+
+.artikel h1 {
+    font-size: x-large; /* Mengurangi ukuran font judul untuk mobile */
+}
+
+.artikel p {
+    font-size: 14px; /* Mengurangi ukuran font paragraf untuk mobile */
+    text-indent: 15px; /* Mengurangi indentasi untuk mobile */
+}
+
+.artikel img.profile-banner {
+    width: 100%; /* Mengatur gambar agar menyesuaikan dengan lebar layar */
+}
     
 
 /* Footer Styles Hp */
@@ -587,6 +605,41 @@ button {
 .kontak-item:hover {
     background-color: #007BFF;
     color: #ffffff;
+}
+
+/* Artikel section */
+
+.artikel {
+    background-color: #ffffff; /* Warna latar belakang artikel */
+    padding: 30px; /* Padding untuk memberikan ruang di dalam artikel */
+    border-radius: 8px; /* Pembulatan sudut untuk estetika */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk efek elevasi */
+    margin-bottom: 50px; /* Jarak antara artikel dengan konten di bawahnya */
+}
+
+.artikel h1 {
+    margin-bottom: 20px; /* Jarak antara judul dengan paragraf */
+    color: #2c3e50; /* Warna judul artikel */
+    font-weight: 600; /* Ketebalan font judul */
+}
+
+.artikel p {
+    margin-bottom: 20px; /* Jarak antara paragraf */
+    line-height: 1.8; /* Tinggi baris untuk keterbacaan */
+    text-indent: 20px; /* Indentasi pada awal paragraf */
+}
+
+.artikel p b {
+    display: block; /* Mengatur quote untuk ditampilkan dalam satu baris tersendiri */
+    margin-top: 20px; /* Jarak dari quote dengan paragraf sebelumnya */
+    font-weight: 600; /* Ketebalan font untuk quote */
+    font-size: 18px; /* Ukuran font quote */
+    text-align: center; /* Pusatkan teks quote */
+}
+
+.artikel img.profile-banner {
+    margin-bottom: 20px; /* Jarak antara gambar banner dengan konten */
+    border-radius: 8px; /* Pembulatan sudut gambar */
 }
 
 
