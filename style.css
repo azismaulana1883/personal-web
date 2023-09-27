@@ -31,12 +31,12 @@ html, body {
 .main {
     display: flex;
     flex-direction: column; 
-    align-items: center; /* Untuk memusatkan konten secara horizontal */
-    justify-content: center; /* Untuk memusatkan konten secara vertikal */
+    align-items: center; 
+    justify-content: center; 
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    padding: 20px 0; /* Memberikan padding atas dan bawah 20px */
+    padding: 20px 0; 
     }
 
 a {
@@ -83,9 +83,9 @@ button {
 
 .fade-in {
     opacity: 0;
-    transform: translateY(20px); /* Ini akan memberikan sedikit efek geser ke bawah */
-    transition: opacity 1s, transform 1s; /* Efek transisi ketika opasitas dan transformasi berubah */
-    will-change: opacity, transform; /* Optimasi performa */
+    transform: translateY(20px); 
+    transition: opacity 1s, transform 1s; 
+    will-change: opacity, transform; 
 }
 
 .fade-right {
@@ -127,12 +127,12 @@ button {
 
 /* Styling untuk semua ukuran layar */
 .header {
-    position: fixed; /* Ini akan memastikan header tetap di posisinya saat discroll */
-    top: 0; /* Memastikan header berada di atas */
-    left: 0; /* Memastikan header berada di sisi kiri */
-    width: 100%; /* Mengambil seluruh lebar layar */
-    z-index: 1000; /* Ini akan memastikan header selalu berada di atas konten lainnya */
-    background-color: #007BFF; /* Menambahkan latar belakang agar konten di bawahnya tidak terlihat saat overlap */
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+    background-color: #007BFF; 
 }
 
 
@@ -153,23 +153,23 @@ button {
 
 .nav__bars {
     display: none;
-    width: 100px; /* Set lebar untuk container tombol */
+    width: 100px; 
 }
 
 .bars__line hr {
-    margin: 2px 0; /* Jarak antar garis */
+    margin: 2px 0; 
     border: 0;
     width: 30px;
-    height: 2px; /* Ketebalan garis */
-    background-color: white; /* Warna garis */
+    height: 2px; 
+    background-color: white; 
 }
 
 .menu__bar {
     display: flex;
-    transition: max-height 0.5s ease; /* transition untuk animasi */
+    transition: max-height 0.5s ease; 
     max-height: 0;
     overflow: hidden;
-    flex-direction: column; /* agar item menu ditampilkan secara vertikal */
+    flex-direction: column; 
 }
 
 .menu__bar a {
@@ -177,7 +177,7 @@ button {
 }
 
 .menu__bar.active {
-    max-height: 150px; /* tinggi maksimal saat menu dibuka */
+    max-height: 150px; 
 }
 
 .portofolio-header{
@@ -210,14 +210,12 @@ button {
 }
 
 .pengalaman {
-    /* background-color: red; */
     margin-top: 10px;
 
 }
 
 .pengalaman-kerja {
     font-size: large;
-    /* background-color: blue; */
     text-align: center;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -238,8 +236,8 @@ button {
 
 .image-web {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Ini akan membuat 2 kolom dengan ukuran yang sama */
-    grid-gap: 10px; /* Ini adalah jarak antara gambar */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
     padding: 10px 0;
     margin: 10px 0;
     align-items: center;
@@ -247,9 +245,9 @@ button {
 }
 
 .web-image {
-    width: 100%; /* Gambar akan menyesuaikan dengan ukuran kolom */
+    width: 100%;
     display: block; 
-    margin: 0 auto; /* Ini akan memusatkan gambar jika lebar aslinya lebih kecil dari lebar kolom */
+    margin: 0 auto;
 }
 
 /* Blog Styles dengan Flexbox */
@@ -268,23 +266,23 @@ button {
 
 .blog-posts {
     display: flex;
-    flex-wrap: wrap; /* Untuk memastikan artikel menyesuaikan dengan lebar layar dan mengalir dengan baik */
-    justify-content: center; /* Posisi artikel ke tengah */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
 .blog-post {
-    flex: 1 1 calc(30% - 1rem); /* Ini akan memastikan setiap artikel mengambil ~30% dari lebar total, dengan mengurangi jarak */
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan untuk efek elevasi */
-    border-radius: 8px; /* Pembulatan sudut */
-    overflow: hidden; /* Agar gambar dan konten tidak melewati batas pembulatan */
-    transition: transform 0.3s ease; /* Efek hover */
-    margin: 1rem; /* Memberikan sedikit margin di sekitar setiap artikel */
-    text-align: left; /* Untuk mengatur teks ke kiri */
+    flex: 1 1 calc(30% - 1rem);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 1rem;
+    text-align: left;
 }
 
 .blog-post:hover {
-    transform: scale(1.05); /* Efek zoom saat di-hover */
+    transform: scale(1.05);
 }
 
 .blog-post img {
@@ -298,7 +296,7 @@ button {
     background-color: #007BFF;
     color: #fff;
     margin-top: 0;
-    text-align: center; /* Mengatur judul artikel ke tengah */
+    text-align: center;
 }
 
 .blog-post p {
@@ -313,7 +311,7 @@ button {
 }
 
 .portfolio-img {
-    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    width: calc(25% - 10px);
     max-width: 100%; 
     height: auto;
     transition: transform 0.3s ease;
@@ -326,18 +324,18 @@ button {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Memberikan ruang di antara daftar skill */
-    margin-top: 20px; /* Jarak antara gambar dan daftar skill */
+    justify-content: space-around;
+    margin-top: 20px; 
 }
 
 .skills h2 {
-    width: 100%; /* Mengambil seluruh lebar container */
+    width: 100%;
     text-align: center;
-    margin-bottom: 10px; /* Jarak antara judul dan daftar skill */
+    margin-bottom: 10px;
 }
 
 .skills p {
-    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    width: calc(25% - 10px);
     text-align: center;
 }
 
@@ -347,11 +345,11 @@ button {
 /* Responsivitas untuk layar <= 768px */
 @media (max-width: 768px) {
     .nav__btn-auth {
-        display: none; /* sembunyikan menu default di layar mobile */
+        display: none;
     }
 
     .nav__bars {
-        display: block; /* tampilkan tombol di layar mobile */
+        display: block; 
     }
     .nav {
         background-color: blueviolet;
@@ -370,14 +368,12 @@ button {
     }
 
     .pengalaman {
-        /* background-color: red; */
         margin-top: 10px;
     
     }
     
     .pengalaman-kerja {
         font-size: x-large;
-        /* background-color: blue; */
         text-align: center;
         margin-top: 15px;
         margin-bottom: 10px;
@@ -389,8 +385,8 @@ button {
     
     .image-web {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Ini akan membuat 2 kolom dengan ukuran yang sama */
-        grid-gap: 10px; /* Ini adalah jarak antara gambar */
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
         padding: 10px 0;
         margin: 10px 0;
         align-items: center;
@@ -398,9 +394,9 @@ button {
     }
     
     .web-image {
-        width: 100%; /* Gambar akan menyesuaikan dengan ukuran kolom */
+        width: 100%;
         display: block; 
-        margin: 0 auto; /* Ini akan memusatkan gambar jika lebar aslinya lebih kecil dari lebar kolom */
+        margin: 0 auto;
     }
 
     /* Blog Styles dengan Flexbox HP */
@@ -419,23 +415,23 @@ button {
 
 .blog-posts {
     display: flex;
-    flex-wrap: wrap; /* Untuk memastikan artikel menyesuaikan dengan lebar layar dan mengalir dengan baik */
-    justify-content: center; /* Posisi artikel ke tengah */
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
 }
 
 .blog-post {
-    flex: 1 1 calc(30% - 1rem); /* Ini akan memastikan setiap artikel mengambil ~30% dari lebar total, dengan mengurangi jarak */
-    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1); /* Memberikan sedikit bayangan untuk efek elevasi */
-    border-radius: 8px; /* Pembulatan sudut */
-    overflow: hidden; /* Agar gambar dan konten tidak melewati batas pembulatan */
-    transition: transform 0.3s ease; /* Efek hover */
-    margin: 1rem; /* Memberikan sedikit margin di sekitar setiap artikel */
-    text-align: left; /* Untuk mengatur teks ke kiri */
+    flex: 1 1 calc(30% - 1rem);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin: 1rem;
+    text-align: left;
 }
 
 .blog-post:hover {
-    transform: scale(1.05); /* Efek zoom saat di-hover */
+    transform: scale(1.05);
 }
 
 .blog-post img {
@@ -449,7 +445,7 @@ button {
     background-color: #007BFF;
     color: #fff;
     margin-top: 0;
-    text-align: center; /* Mengatur judul artikel ke tengah */
+    text-align: center;
 }
 
 .blog-post p {
@@ -464,7 +460,7 @@ button {
 }
 
 .portfolio-img {
-    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    width: calc(25% - 10px);
     max-width: 100%; 
     height: auto;
     transition: transform 0.3s ease;
@@ -477,18 +473,18 @@ button {
 .skills {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Memberikan ruang di antara daftar skill */
-    margin-top: 20px; /* Jarak antara gambar dan daftar skill */
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .skills h2 {
-    width: 100%; /* Mengambil seluruh lebar container */
+    width: 100%;
     text-align: center;
-    margin-bottom: 10px; /* Jarak antara judul dan daftar skill */
+    margin-bottom: 10px;
 }
 
 .skills p {
-    width: calc(25% - 10px); /* Mengambil 1/4 lebar container, dikurangi 10px */
+    width: calc(25% - 10px);
     text-align: center;
 }
 
@@ -499,63 +495,63 @@ button {
 }
 
 .artikel h1 {
-    font-size: x-large; /* Mengurangi ukuran font judul untuk mobile */
+    font-size: x-large;
 }
 
 .artikel p {
-    font-size: 14px; /* Mengurangi ukuran font paragraf untuk mobile */
-    text-indent: 15px; /* Mengurangi indentasi untuk mobile */
+    font-size: 14px;
+    text-indent: 15px; 
 }
 
 .artikel img.profile-banner {
-    width: 100%; /* Mengatur gambar agar menyesuaikan dengan lebar layar */
+    width: 100%; 
 }
     
 
 /* Footer Styles Hp */
 
 .footer {
-    background-color: #333; /* Warna latar belakang footer */
-    color: #ffffff; /* Warna teks footer */
-    padding: 1rem 0; /* Padding atas dan bawah */
+    background-color: #333;
+    color: #ffffff;
+    padding: 1rem 0;
     display: flexbox;
-    justify-content: space-between; /* Posisi konten footer untuk terpisah */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: relative; /* Penempatan absolut agar footer tetap di bagian bawah */
-    bottom: 100%; /* Memastikan footer berada di paling bawah */
+    position: relative;
+    bottom: 100%;
 }
 
 .footer__logo a,
 .footer__navigation a {
-    color: #ffffff; /* Warna tautan di footer */
-    margin-bottom: 0.5rem; /* Margin antara tautan-tautan */
+    color: #ffffff;
+    margin-bottom: 0.5rem;
     text-decoration: none;
-    transition: color 0.3s ease; /* Efek transisi saat hover */
+    transition: color 0.3s ease;
 }
 
 .footer__logo a:hover,
 .footer__navigation a:hover {
-    color: #007BFF; /* Warna tautan saat dihover */
+    color: #007BFF;
 }
 
 .footer__logo p {
-    margin-top: 0.5rem; /* Margin di atas teks hak cipta */
+    margin-top: 0.5rem;
 }
 
 .footer__navigation {
-    display: flexbox; /* Membuat kolom navigasi berdampingan */
-    gap: 1rem; /* Jarak antara kolom navigasi */
+    display: flexbox;
+    gap: 1rem;
     margin-right: 10%;
 }
 
 .footer__navigation ul {
-    list-style-type: none; /* Menghapus bullet points dari daftar */
-    padding: 0; /* Menghapus padding dari daftar */
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer__navigation li {
-    margin-bottom: 0.5rem; /* Margin antara item-item daftar */
+    margin-bottom: 0.5rem;
 }
 
 
@@ -610,36 +606,36 @@ button {
 /* Artikel section */
 
 .artikel {
-    background-color: #ffffff; /* Warna latar belakang artikel */
-    padding: 30px; /* Padding untuk memberikan ruang di dalam artikel */
-    border-radius: 8px; /* Pembulatan sudut untuk estetika */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk efek elevasi */
-    margin-bottom: 50px; /* Jarak antara artikel dengan konten di bawahnya */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
 }
 
 .artikel h1 {
-    margin-bottom: 20px; /* Jarak antara judul dengan paragraf */
-    color: #2c3e50; /* Warna judul artikel */
-    font-weight: 600; /* Ketebalan font judul */
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 600;
 }
 
 .artikel p {
-    margin-bottom: 20px; /* Jarak antara paragraf */
-    line-height: 1.8; /* Tinggi baris untuk keterbacaan */
-    text-indent: 20px; /* Indentasi pada awal paragraf */
+    margin-bottom: 20px;
+    line-height: 1.8;
+    text-indent: 20px;
 }
 
 .artikel p b {
-    display: block; /* Mengatur quote untuk ditampilkan dalam satu baris tersendiri */
-    margin-top: 20px; /* Jarak dari quote dengan paragraf sebelumnya */
-    font-weight: 600; /* Ketebalan font untuk quote */
-    font-size: 18px; /* Ukuran font quote */
-    text-align: center; /* Pusatkan teks quote */
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
 }
 
 .artikel img.profile-banner {
-    margin-bottom: 20px; /* Jarak antara gambar banner dengan konten */
-    border-radius: 8px; /* Pembulatan sudut gambar */
+    margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 
@@ -647,46 +643,46 @@ button {
 /* Footer Styles */
 
 .footer {
-    background-color: #333; /* Warna latar belakang footer */
-    color: #ffffff; /* Warna teks footer */
-    padding: 2rem 0; /* Padding atas dan bawah */
+    background-color: #333;
+    color: #ffffff;
+    padding: 2rem 0;
     display: flex;
-    justify-content: space-between; /* Posisi konten footer untuk terpisah */
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    position: relative; /* Penempatan absolut agar footer tetap di bagian bawah */
-    bottom: 0; /* Memastikan footer berada di paling bawah */
+    position: relative;
+    bottom: 0;
 }
 
 .footer__logo a,
 .footer__navigation a {
-    color: #ffffff; /* Warna tautan di footer */
-    margin-bottom: 0.5rem; /* Margin antara tautan-tautan */
+    color: #ffffff;
+    margin-bottom: 0.5rem;
     text-decoration: none;
-    transition: color 0.3s ease; /* Efek transisi saat hover */
+    transition: color 0.3s ease;
 }
 
 .footer__logo a:hover,
 .footer__navigation a:hover {
-    color: #007BFF; /* Warna tautan saat dihover */
+    color: #007BFF;
 }
 
 .footer__logo p {
-    margin-top: 0.5rem; /* Margin di atas teks hak cipta */
+    margin-top: 0.5rem;
 }
 
 .footer__navigation {
-    display: flex; /* Membuat kolom navigasi berdampingan */
-    gap: 1rem; /* Jarak antara kolom navigasi */
+    display: flex;
+    gap: 1rem;
     margin-right: 10%;
 }
 
 .footer__navigation ul {
-    list-style-type: none; /* Menghapus bullet points dari daftar */
-    padding: 0; /* Menghapus padding dari daftar */
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer__navigation li {
-    margin-bottom: 0.5rem; /* Margin antara item-item daftar */
+    margin-bottom: 0.5rem;
 }
 
