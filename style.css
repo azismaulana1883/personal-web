@@ -255,6 +255,54 @@ button {
     margin: 0 auto;
 }
 
+/* Hero Section */
+.hero {
+    margin-right: 50%;
+    margin-top: 13%;
+}
+
+.hero .title-hero{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.hero span{
+    color: blue;
+}
+
+.hero .hero-deskripsi{
+    color: #555;
+    line-height: 22px;
+}
+
+.hero a{
+    background: #212121;
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.hero-images{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    bottom: 0;
+    left: 0%;
+}
+
+.hero-images img{
+    height: 30%;
+    position: relative;
+    right: -150%;
+    bottom: 0%;
+    transform: translateX(-50);
+}
+
+
 /* Blog Styles dengan Flexbox */
 
 .blog {
@@ -412,6 +460,53 @@ button {
         margin: 0 auto;
     }
 
+    /* Hero Section HP */
+.hero {
+    margin-right: 50%;
+    margin-top: 13%;
+}
+
+.hero .title-hero{
+    font-size: 50px;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.hero span{
+    color: blue;
+}
+
+.hero .hero-deskripsi{
+    color: #555;
+    line-height: 22px;
+}
+
+.hero a{
+    background: #212121;
+    padding: 10px 18px;
+    font-weight: bold;
+    color: #fff;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.hero-images{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    bottom: 0;
+    left: 200%;
+}
+
+.hero-images img{
+    height: 30%;
+    position: relative;
+    left: -100%;
+    bottom: 0%;
+    transform: translateX(-50);
+}
+
     /* Blog Styles dengan Flexbox HP */
 
 .blog {
@@ -525,8 +620,8 @@ button {
 /* Footer Styles Hp */
 
 .footer {
-    background-color: #333;
-    color: #ffffff;
+    background-color: #2bec118e;
+    color: #333;
     padding: 1rem 0;
     display: flexbox;
     justify-content: space-between;
@@ -657,8 +752,8 @@ button {
 /* Footer Styles */
 
 .footer {
-    background-color: #333;
-    color: #ffffff;
+    background-color: #2bec118e;
+    color: #333;
     padding: 2rem 0;
     display: flex;
     justify-content: space-between;
@@ -666,11 +761,12 @@ button {
     width: 100%;
     position: relative;
     bottom: 0;
+    box-shadow: 1px 1px 1px 1px #71c9ce;;
 }
 
 .footer__logo a,
 .footer__navigation a {
-    color: #ffffff;
+    color: #333;
     margin-bottom: 0.5rem;
     text-decoration: none;
     transition: color 0.3s ease;
