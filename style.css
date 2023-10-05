@@ -422,6 +422,14 @@ button {
     align-items: center;
 }
 
+.profile-sertifikat:hover {
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
 .sertifikat-deskripsi{
     text-align: center;
     font-family: sans-serif;
