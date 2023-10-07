@@ -7,7 +7,7 @@
 
 h1 {
     font-size: xx-large;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: sans-serif;
     text-align: center;
     padding-top: 50px;
 }
@@ -149,11 +149,17 @@ button {
     box-shadow: 1px 1px 1px 1px #71c9ce;;
 }
 
+.nav__btn-auth a{
+    color: black;
+    font-family: sans-serif;
+}
+
+
 .nav__logo  
 .nav__btn-auth a:hover {
     margin: 1rem;
     text-decoration: wavy;
-    color: white;
+    color: rgb(189, 32, 32);
 }
 
 .nav__bars {
@@ -212,6 +218,13 @@ button {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+.profile-banner:hover{
+    transform: scale(2);
+    transition: transform 0.5s ease-in-out;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .pengalaman {
@@ -452,13 +465,6 @@ button {
         justify-content: space-between;
         align-items: left;
         padding: 0.5rem 2rem;
-    }
-    .nav__btn-auth {
-        display: none;
-    }
-
-    .nav__bars {
-        display: block; 
     }
 
     h1 {
